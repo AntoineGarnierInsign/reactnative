@@ -1,31 +1,32 @@
-import React from 'react';
-import {Image, Text, SafeAreaView, View} from 'react-native';
-import Button from './components/ui/Button/Button';
-import style from './App.style';
+import React, {useState, useEffect} from 'react';
+import {SafeAreaView, ScrollView, TouchableOpacity, View} from 'react-native';
+import CarList from './pages/CarList/CarList.stored';
+import {store} from './store/store';
+import {Provider} from 'react-redux';
+import EditCar from './pages/EditCar/EditCar.stored';
+import Home from './components/ui/Home/Home';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+
+const Stack = createNativeStackNavigator();
 
 const App = props => {
+  console.log(store);
+
   return (
-    <SafeAreaView>
-      <View>
-        <Button bgColor="red" color="green">
-          <View style={style.appButtonView}>
-            <Image
-              style={style.appButtonImage}
-              source={require('./assets/ramyeon.png')}
-            />
-            <Text style={{...style.appButtonText, ...style.bold}}>Patate</Text>
-          </View>
-        </Button>
-        <Button bgColor="blue" color="yellow" children={<Text>Hello</Text>} />
-        <Button>
-          <Image
-            style={style.appButtonImage}
-            source={require('./assets/ramyeon.png')}
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            options={{headerShown: false}}
+            component={Home}
           />
-          <Text style={style.appButtonText}>Patate2</Text>
-        </Button>
-      </View>
-    </SafeAreaView>
+          <Stack.Screen name="List" component={CarList} />
+          <Stack.Screen name="Edit" component={EditCar} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 

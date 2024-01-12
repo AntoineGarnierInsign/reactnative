@@ -1,0 +1,100 @@
+{
+  "cars": [
+      {
+          "id": 0,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 1,
+          "marque": "Renault",
+          "model": "MX5",
+          "immat": "BY-188-CZ",
+          "kms": 56784,
+          "present": false
+      },
+      {
+          "id": 2,
+          "marque": "Renault",
+          "model": "Capture",
+          "immat": "ZZ-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 3,
+          "marque": "Renault",
+          "model": "Megane",
+          "immat": "MG-123-CZ",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 4,
+          "marque": "Renault",
+          "model": "KADJAR",
+          "immat": "XY-254-CZ",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 5,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "ZY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 6,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "CB-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 7,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 8,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 9,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 10,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      },
+      {
+          "id": 11,
+          "marque": "Renault",
+          "model": "tesla",
+          "immat": "XY-123-AB",
+          "kms": 56784,
+          "present": true
+      }
+  ]
+}

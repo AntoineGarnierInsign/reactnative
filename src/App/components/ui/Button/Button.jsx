@@ -5,23 +5,27 @@ import style from './Button.style';
 
 const Button = props => {
   console.log(props);
+  const assembleStyle = () => {
+    const styleret = {...style.Button};
+    if (props.bgColor) {
+      styleret.backgroundColor = props.bgColor;
+    }
 
+    return styleret;
+  };
   return (
     <TouchableHighlight>
-      <View style={{...style.Button, backgroundColor: props.bgColor}}>
-        {props.children}
-      </View>
+      <View style={assembleStyle()}>{props.children}</View>
     </TouchableHighlight>
   );
 };
 
 Button.propTypes = {
   children: PropTypes.any.isRequired,
-  bgColor: PropTypes.oneOf(['red', 'yellow']),
+  bgColor: PropTypes.oneOf(['red', 'yellow', 'blue', 'green']),
   color: PropTypes.string,
 };
 Button.defaultProps = {
-  bgColor: 'red',
   children: <Text>Button</Text>,
 };
 export default Button;
